@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: plan-a-level-1-app
+  namespace: plan-a-level-1-namespace
+  labels:
+    app: plan-a-level-1-app
+spec:
+  selector:
+    app: plan-a-level-1-app
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 3000
+  type: LoadBalancer
